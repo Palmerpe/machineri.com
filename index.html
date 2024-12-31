@@ -6,27 +6,15 @@
   <title>Machineri.com</title>
   <!-- Tailwind CSS vía CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Animación para el slider */
-    @keyframes slide {
-        0%, 25% { transform: translateX(0); }
-        26%, 50% { transform: translateX(-100%); }
-        51%, 75% { transform: translateX(-200%); }
-        76%, 100% { transform: translateX(-300%); }
-      }
-      
-      .animate-[slide_8s_infinite] {
-        animation: slide 8s infinite;
-      }
-
-  </style>
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body class="bg-gray-100 text-gray-800">
   <!-- Header -->
   <header class="bg-blue-600 text-white py-4">
     <div class="container mx-auto flex justify-between items-center px-4">
       <h1 class="text-3xl font-bold">J&K Machiner EIRL</h1>
-      <img src="logo.png" alt="Logo" class="h-12">
+      <img src="img/logo.png" alt="Logo" class="h-12">
     </div>
   </header>
 
@@ -42,79 +30,20 @@
   </nav>
 
   <!-- Slider -->
-  <section id="inicio" class="overflow-hidden relative">
-    <div class="flex w-[400%] animate-[slide_8s_infinite] h-64">
-      <img src="img/foto1.jpg" alt="Foto 1" class="w-1/4 h-full object-cover">
-      <img src="img/foto2.jpg" alt="Foto 2" class="w-1/4 h-full object-cover">
-      <img src="img/foto3.jpg" alt="Foto 3" class="w-1/4 h-full object-cover">
-      <img src="img/foto4.jpeg" alt="Foto 4" class="w-1/4 h-full object-cover">
+  <section id="inicio" class="slider-container">
+    <div class="slider-track">
+      <img src="img/foto-principal.jpg" alt="Imagen Principal" class="slider-image">
+      <img src="https://proactivo.com.pe/wp-content/uploads/2019/05/metalmecanica.png" alt="Foto 3" class="slider-image">
+      <img src="https://www.trihton.com/imagenes/corte-laser/background-02.jpg" alt="Foto 4" class="slider-image">
     </div>
   </section>
 
-  <!-- Sección de imagen y descripción -->
+  <!-- Sección de contenido adicional -->
   <section class="container mx-auto flex items-center py-8">
     <img src="img/foto-principal.jpg" alt="Imagen Principal" class="w-1/2 h-auto rounded-lg shadow-lg">
     <div class="w-1/2 pl-8">
       <h2 class="text-2xl font-bold text-blue-600">Expertos en soldadura y fabricación</h2>
-      <p class="mt-4 text-gray-700">Somos una empresa dedicada a la soldadura y fabricación, montaje y desmontaje de 
-        estructuras metálicas para diferentes tipos de proyectos, desde barandas, puentes, tuberías, techos y entre otros.
-         Nos especializamos en brindar soluciones eficientes y de calidad en Lima y todo el Perú. Confía en nosotros para tus proyectos.</p>
-    </div>
-  </section>
-
-  <!-- Descripción con dos fotos -->
-  <section class="container mx-auto flex py-8">
-    <div class="w-2/5">
-      <h2 class="text-2xl font-bold text-blue-600">Fabricación y soldadura</h2>
-      <p class="mt-4 text-gray-700">J&KMachineri se especializa en servicios de fabricación , soldadura montaje y desmontaje,
-        brindando soluciones eficientes y de calidad para todo tipo de proyectos. Nuestro enfoque en la soldadura y
-         fabricación nos permite ofrecer trabajos de alta precisión y durabilidad. Confía en nosotros para tus necesidades
-          de barandas, puentes, tuberías de metal y más en Lima, Perú..</p>
-    </div>
-    <div class="w-3/5 flex space-x-4">
-      <img src="img/foto5.jpeg" alt="Foto 1" class="w-1/2 h-auto rounded-lg shadow-lg">
-      <img src="img/foto6.jpeg" alt="Foto 2" class="w-1/2 h-auto rounded-lg shadow-lg">
-    </div>
-  </section>
- <!-- Sección de innovacion -->
-  <section class="container mx-auto flex items-center py-8">
-    <img src="img/foto-principal.jpg" alt="Imagen Principal" class="w-1/2 h-auto rounded-lg shadow-lg">
-    <div class="w-1/2 pl-8">
-      <h2 class="text-2xl font-bold text-blue-600">Innovación en construcción</h2>
-      <p class="mt-4 text-gray-700">J&K Machineri se especializa en la fabricación y soldadura de estructuras metálicas
-         para diversos proyectos de fabricación  montaje y desmontaje. Contamos con un equipo altamente capacitado
-          y materiales de calidad para garantizar resultados duraderos y de alta calidad..</p>
-    </div>
-  </section>
-  <!-- Sección de fotos -->
-  <section class="container mx-auto py-8">
-    <h2 class="text-2xl font-bold text-blue-600 text-center">Galería</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-      <img src="galeria1.jpg" alt="Galería 1" class="w-full h-40 object-cover rounded-lg shadow-lg">
-      <img src="galeria2.jpg" alt="Galería 2" class="w-full h-40 object-cover rounded-lg shadow-lg">
-      <img src="galeria3.jpg" alt="Galería 3" class="w-full h-40 object-cover rounded-lg shadow-lg">
-      <img src="galeria4.jpg" alt="Galería 4" class="w-full h-40 object-cover rounded-lg shadow-lg">
-    </div>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto" class="container mx-auto py-8">
-    <h2 class="text-2xl font-bold text-blue-600">Contáctanos</h2>
-    <div class="flex mt-4">
-      <!-- Información de contacto -->
-      <div class="w-1/2">
-        <p><strong>Ubicación:</strong> <a href="https://maps.google.com" class="text-blue-600 hover:underline">Calle Industria #123, Ciudad</a></p>
-        <p><strong>Teléfono:</strong> <a href="tel:+521234567890" class="text-blue-600 hover:underline">+52 123 456 7890</a></p>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/521234567890" class="text-blue-600 hover:underline">+52 123 456 7890</a></p>
-      </div>
-
-      <!-- Formulario de contacto -->
-      <form class="w-1/2 space-y-4">
-        <input type="text" placeholder="Nombre" class="w-full p-2 border rounded">
-        <input type="email" placeholder="Correo Electrónico" class="w-full p-2 border rounded">
-        <textarea placeholder="Mensaje" class="w-full p-2 border rounded"></textarea>
-        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Enviar</button>
-      </form>
+      <p class="mt-4 text-gray-700">Somos una empresa dedicada...</p>
     </div>
   </section>
 
@@ -125,5 +54,8 @@
       <p>Teléfono: +52 123 456 7890</p>
     </div>
   </footer>
+
+  <!-- Enlace al archivo JS -->
+  <script src="js/slider.js"></script>
 </body>
 </html>
