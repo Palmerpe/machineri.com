@@ -27,3 +27,27 @@
 }
 
 
+/* Estilo base para el nav */
+/* Ocultar menú en móvil por defecto */
+#menu.hidden {
+  display: none;
+}
+
+/* Mostrar menú en móvil cuando tiene la clase "show" */
+#menu.show {
+  display: flex;
+  flex-direction: column;
+  background-color: #333; /* Fondo opcional para menú desplegable */
+  width: 100%;
+  padding: 1rem 0;
+}
+
+/* Menú en pantallas grandes */
+@media (min-width: 768px) {
+  #menu {
+      display: flex !important; /* Siempre visible en pantallas grandes */
+      flex-direction: row;
+      justify-content: center;
+  }
+}
+

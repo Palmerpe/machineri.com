@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Machineri.com</title>
+ 
   <!-- Tailwind CSS vía CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Enlace al archivo CSS -->
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-gray-100 text-gray-800">
   <!-- Header -->
@@ -25,7 +27,7 @@
 <!-- Navegación -->
 <nav class="bg-gray-800 text-white py-2">
     <div class="container mx-auto flex justify-between items-center px-4">
-      
+        <a href="#" class="text-2xl font-bold">Menú</a>
         <div class="md:hidden">
             <button id="menu-button" class="focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -33,12 +35,12 @@
                 </svg>
             </button>
         </div>
-        <ul id="menu" class="hidden md:flex justify-center flex-1 space-x-4">
-            <li><a href="#inicio" class="hover:underline px-2 py-1 rounded-lg hover:bg-gray-700">Inicio</a></li>
-            <li><a href="#servicios" class="hover:underline px-2 py-1 rounded-lg hover:bg-gray-700">Servicios</a></li>
-            <li><a href="#trabajo" class="hover:underline px-2 py-1 rounded-lg hover:bg-gray-700">Nuestro Trabajo</a></li>
-            <li><a href="#contacto" class="hover:underline px-2 py-1 rounded-lg hover:bg-gray-700">Contacto</a></li>
-            <li><a href="#nosotros" class="hover:underline px-2 py-1 rounded-lg hover:bg-gray-700">Sobre Nosotros</a></li>
+        <ul id="menu" class="hidden md:flex md:flex-row justify-center flex-1 space-x-4 md:space-x-4">
+            <li class="nav-item"><a href="#inicio" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Inicio</a></li>
+            <li class="nav-item"><a href="#servicios" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Servicios</a></li>
+            <li class="nav-item"><a href="#trabajo" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Nuestro Trabajo</a></li>
+            <li class="nav-item"><a href="#contacto" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Contacto</a></li>
+            <li class="nav-item"><a href="#nosotros" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Sobre Nosotros</a></li>
         </ul>
     </div>
 </nav>
@@ -47,12 +49,12 @@
 <section id="inicio" class="slider-container overflow-hidden">
     <div class="slider-track flex transition-transform duration-700 ease-in-out">
         <img src="img/foto-principal.jpg" alt="Imagen Principal" class="slider-image">
-        <img src="https://proactivo.com.pe/wp-content/uploads/2019/05/metalmecanica.png" alt="Foto 3" class="slider-image">
-        <img src="https://www.trihton.com/imagenes/corte-laser/background-02.jpg" alt="Foto 4" class="slider-image">
+        <img src="img/metalmecanica.png" alt="Foto 3" class="slider-image">
+        <img src="img/background-02.jpg" alt="Foto 4" class="slider-image">
         <!-- Duplicamos las imágenes para el bucle infinito -->
         <img src="img/foto-principal.jpg" alt="Imagen Principal" class="slider-image">
-        <img src="https://proactivo.com.pe/wp-content/uploads/2019/05/metalmecanica.png" alt="Foto 3" class="slider-image">
-        <img src="https://www.trihton.com/imagenes/corte-laser/background-02.jpg" alt="Foto 4" class="slider-image">
+        <img src="img/metalmecanica.png" alt="Foto 3" class="slider-image">
+        <img src="img/background-02.jpg" alt="Foto 4" class="slider-image">
     </div>
 </section>
 
@@ -120,7 +122,7 @@
             <img src="https://pldistribucion.com.ar/web/wp-content/uploads/mantenimiento-industrial-700x438-1.jpg" alt="Mantenimiento Industrial" class="h-full w-full object-cover">
         </div>
         <div class="flex-grow bg-gray-100 flex flex-col justify-center items-center text-center mt-4 p-4">
-            <p class="text-2xl font-bold">Mantenimiento Industrial</p>
+            <p class="text-2xl font-bold text-blue-600 text-center">Mantenimiento Industrial</p>
             <p class="mt-2 text-gray-700"> <b> En J&K Machinery EIRL</b> <br/>
                 contamos con profesionales altamente capacitados en mantenimiento industrial
                  para un rendimiento ininterrumpido.
@@ -135,7 +137,7 @@
             <img src="https://media.istockphoto.com/id/1469508136/es/foto/electricista-instalando-sistema-de-cableado-en-el-techo.jpg?s=612x612&w=0&k=20&c=QgvvOF6WlS4_w6K15h1Y6r0Hshz012b0pY4YSy2rVl4=" alt="Obras Eléctricas" class="h-full w-full object-cover">
         </div>
         <div class="flex-grow bg-gray-100 flex flex-col justify-center items-center text-center mt-4 p-4">
-            <p class="text-2xl font-bold">Obras Eléctricas</p>
+            <p class="text-2xl font-bold text-blue-600 text-center">Obras Eléctricas</p>
             <p class="mt-2 text-gray-700"><b> En J&K Marchiney EIRL </b>proporcionamos servicios de alta calidad y soluciones innovadoras para diversas necesidades industriales y comerciales. 
                 Nuestra experiencia abarca desde la instalación y mantenimiento de sistemas eléctricos complejos, 
                 hasta la implementación de proyectos de automatización y eficiencia energética.</p>
@@ -148,7 +150,7 @@
             <img src="https://tandtcompany.fr/wp-content/uploads/2024/02/hall-rayonnages-montage.jpg" alt="Montajes y Desmontajes" class="h-full w-full object-cover">
         </div>
         <div class="flex-grow bg-gray-100 flex flex-col justify-center items-center text-center mt-4 p-4">
-            <p class="text-2xl font-bold">Montajes y Desmontajes</p>
+            <p class="text-2xl font-bold text-blue-600 text-center">Montajes y Desmontajes</p>
             <p class="mt-2 text-gray-700"> <b> J&K Machinery EIRL </b>es especialista en montajes y desmontajes de estructuras industriales y comerciales. 
                 Nuestro equipo capacitado se encarga de realizar estas tareas con precisión y seguridad, 
                 asegurando un servicio eficiente y de alta calidad. Confía en nosotros para manejar proyectos complejos con profesionalismo 
@@ -166,8 +168,10 @@
     </div>
   </footer>
 
-  <!-- Enlace al archivo JS -->
-  <script src="js/slider.js"></script>
-  <script src="menu.js"></script>
+ <!-- Enlace al archivo JS -->
+<script src="js/slider.js"></script>
+<script src="js/menu.js"></script>
 </body>
 </html>
+
+

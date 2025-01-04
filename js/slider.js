@@ -37,3 +37,5 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 50); // Ajuste de tiempo para asegurar la transición
   });
 });
+
+
