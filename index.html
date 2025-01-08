@@ -4,59 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Machineri.com</title>
- 
-  <!-- Tailwind CSS vía CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Enlace al archivo CSS -->
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-gray-100 text-gray-800">
-  <!-- Header -->
   <header class="bg-blue-600 text-white py-2">
     <div class="container mx-auto flex justify-between items-center w-full h-32 ">
-        <div class="flex-grow-0 w-full md:w-7/12 flex justify-center items-center h-full">
-            <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold text-center">J&K Machinery EIRL</h1>
-        </div>
-        <div class="flex-grow-0 w-full md:w-5/12 h-full flex justify-center items-center ">
-            <img src="https://www.creativefabrica.com/wp-content/uploads/2018/10/Vintage-gear-machinery-logo-by-yahyaanasatokillah-580x387.jpg" alt="Logo" class="h-full object-cover">
-        </div>
+      <div class="flex-grow-0 w-full md:w-7/12 flex justify-center items-center h-full">
+        <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold text-center">J&K Machinery EIRL</h1>
+      </div>
+      <div class="flex-grow-0 w-full md:w-5/12 h-full flex justify-center items-center ">
+        <img src="https://www.creativefabrica.com/wp-content/uploads/2018/10/Vintage-gear-machinery-logo-by-yahyaanasatokillah-580x387.jpg" alt="Logo" class="h-full object-cover">
+      </div>
     </div>
-</header>
+  </header>
 
-<!-- Navegación -->
-<nav class="bg-gray-800 text-white py-2">
+  <nav class="bg-gray-800 text-white py-2 relative">
     <div class="container mx-auto flex justify-between items-center px-4">
-        <a href="#" class="text-2xl font-bold">Menú</a>
-        <div class="md:hidden">
-            <button id="menu-button" class="focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-        <ul id="menu" class="hidden md:flex md:flex-row justify-center flex-1 space-x-4 md:space-x-4">
-            <li class="nav-item"><a href="#inicio" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Inicio</a></li>
-            <li class="nav-item"><a href="#servicios" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Servicios</a></li>
-            <li class="nav-item"><a href="#trabajo" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Nuestro Trabajo</a></li>
-            <li class="nav-item"><a href="#contacto" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Contacto</a></li>
-            <li class="nav-item"><a href="#nosotros" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Sobre Nosotros</a></li>
-        </ul>
+      <a href="index.html" class="text-2xl font-bold">Menú</a>
+      <div class="md:hidden">
+        <button id="menu-button" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <ul id="menu" class="hidden md:flex md:flex-row justify-center flex-1 space-x-4 md:space-x-4">
+        <li class="nav-item"><a href="index.html" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Inicio</a></li>
+        <li class="nav-item group relative">
+          <a href="#" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Servicios</a>
+          <ul class="absolute left-0 mt-2 w-40 bg-gray-800 text-white hidden group-hover:block">
+            <li><a href="fabricacion.html" class="block px-4 py-2 hover:bg-gray-700">Fabricación</a></li>
+            <li><a href="montaje-desmontaje.html" class="block px-4 py-2 hover:bg-gray-700">Montaje y Desmontaje</a></li>
+            <li><a href="obras-civiles.html" class="block px-4 py-2 hover:bg-gray-700">Obras Civiles</a></li>
+            <li><a href="mantenimiento-industrial.html" class="block px-4 py-2 hover:bg-gray-700">Mantenimiento Industrial</a></li>
+            <li><a href="electricidad.html" class="block px-4 py-2 hover:bg-gray-700">Electricidad</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="nosotros.html" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Nosotros</a></li>
+        <li class="nav-item"><a href="contacto.html" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Contacto</a></li>
+      </ul>
     </div>
-</nav>
+  </nav>
+
+
 
 <!-- Slider -->
-<section id="inicio" class="slider-container overflow-hidden">
-    <div class="slider-track flex transition-transform duration-700 ease-in-out">
-        <img src="img/foto-principal.jpg" alt="Imagen Principal" class="slider-image">
-        <img src="img/metalmecanica.png" alt="Foto 3" class="slider-image">
-        <img src="img/background-02.jpg" alt="Foto 4" class="slider-image">
-        <!-- Duplicamos las imágenes para el bucle infinito -->
-        <img src="img/foto-principal.jpg" alt="Imagen Principal" class="slider-image">
-        <img src="img/metalmecanica.png" alt="Foto 3" class="slider-image">
-        <img src="img/background-02.jpg" alt="Foto 4" class="slider-image">
-    </div>
-</section>
+    <section id="inicio" class="slider-container overflow-hidden">
+        <div class="slider-track flex transition-transform duration-700 ease-in-out">
+            <img src="img/foto-principal.jpg" alt="Imagen Principal" class="slider-image"> 
+            <img src="img/metalmecanica.png" alt="Foto 3" class="slider-image">
+            <img src="img/background-02.jpg" alt="Foto 4" class="slider-image"> 
+            <!-- duplicamos las imagenes para  el bucle infinito -->
+            <img src="img/foto-principal.jpg" alt="Imagen Principal" class="slider-image">
+            <img src="img/metalmecanica.png" alt="Foto 3" class="slider-image">
+            <img src="img/background-02.jpg" alt="Foto 4" class="slider-image">
+        </div>
+    </section>
 
 <!-- Sección de contenido adicional -->
 <section class="container mx-auto flex flex-col md:flex-row items-center py-8 bg-gray-100">
@@ -193,6 +198,11 @@
     </div>
 </section>
 
+<!-- Sección de textos dinamicos  -->
+<section class="container mx-auto py-8 px-4 text-center">
+    <h1 class="text-4xl font-extrabold mb-14 text-center text-lightBlue-500 md:text-5xl">Lo que ofrecemos</h1>
+    <p id="dynamic-text" class="text-2xl font-semibold text-gray-800"></p>
+</section>
 
 
 <section class="container mx-auto flex flex-col md:flex-row justify-between items-center py-8 w-full">
@@ -278,11 +288,10 @@
     </div>
 </footer>
 
-
-
  <!-- Enlace al archivo JS -->
 <script src="js/slider.js"></script>
 <script src="js/menu.js"></script>
+<script src="js/inicio.js"></script>
 </body>
 </html>
 

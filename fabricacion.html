@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabricación | J&K Machinery</title>
+    <!-- Tailwind CSS vía CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-2">
+        <div class="container mx-auto flex justify-between items-center w-full h-32">
+            <div class="flex-grow-0 w-full md:w-7/12 flex justify-center items-center h-full">
+                <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold text-center">J&K Machinery EIRL</h1>
+            </div>
+            <div class="flex-grow-0 w-full md:w-5/12 h-full flex justify-center items-center">
+                <img src="https://www.creativefabrica.com/wp-content/uploads/2018/10/Vintage-gear-machinery-logo-by-yahyaanasatokillah-580x387.jpg" alt="Logo" class="h-full object-cover">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="bg-gray-800 text-white py-2">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="index.html" class="text-2xl font-bold">Menú</a>
+            <div class="md:hidden">
+                <button id="menu-button" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <ul id="menu" class="hidden md:flex md:flex-row justify-center flex-1 space-x-4 md:space-x-4">
+                <li class="nav-item"><a href="index.html" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Inicio</a></li>
+                <li class="nav-item group relative">
+                    <a href="#" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Servicios</a>
+                    <ul class="absolute left-0 mt-2 w-40 bg-gray-800 text-white hidden group-hover:block">
+                        <li><a href="fabricacion.html" class="block px-4 py-2 hover:bg-gray-700">Fabricación</a></li>
+                        <li><a href="montaje-desmontaje.html" class="block px-4 py-2 hover:bg-gray-700">Montaje y Desmontaje</a></li>
+                        <li><a href="obras-civiles.html" class="block px-4 py-2 hover:bg-gray-700">Obras Civiles</a></li>
+                        <li><a href="mantenimiento-industrial.html" class="block px-4 py-2 hover:bg-gray-700">Mantenimiento Industrial</a></li>
+                        <li><a href="electricidad.html" class="block px-4 py-2 hover:bg-gray-700">Electricidad</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="nosotros.html" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Nosotros</a></li>
+                <li class="nav-item"><a href="contacto.html" class="nav-link hover:underline block px-4 py-2 rounded-lg hover:bg-gray-700">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- seccion de tipos de fabricacion-->
+    <section class="container mx-auto py-8 px-4">
+        <h1 class="text-4xl font-extrabold mb-10 text-center text-lightBlue-500 md:text-5xl">Tipos de Fabricación</h1>
+        
+        <div class="flex flex-wrap -mx-4">
+            <!-- Foto 1 -->
+            <div class="w-full md:w-1/4 px-4 mb-8">
+                <div class="bg-gray-100 p-4 rounded-lg shadow-lg">
+                    <img src="https://aceroscrea.com/wp-content/uploads/2023/07/escaleras-rectas-con-ojo-entre-sus-barandales.jpg" alt="Fabricación 1" class="w-full rounded-lg mb-4">
+                    <h2 class="text-xl font-semibold mb-2 text-gray-800 text-center">Tipos de Escaleras</h2>
+                    <div class="flex justify-center">
+                        <a href="escaleras.html" class="text-center bg-gray-800 text-white py-2 px-4 rounded-md shadow-md hover:bg-gray-700 transition">
+                            Ver detalles
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Foto 2 -->
+            <div class="w-full md:w-1/4 px-4 mb-8">
+                <div class="bg-gray-100 p-4 rounded-lg shadow-lg">
+                    <img src="https://img.freepik.com/fotos-premium/construccion-techos-edificios-modernos-fondo-urbano-lineas-metalicas-construccion_74333-99.jpg" alt="Fabricación 2" class="w-full rounded-lg mb-4">
+                    <h2 class="text-xl font-semibold mb-2 text-gray-800 text-center">Tipos de Techos</h2>
+                    <div class="flex justify-center">
+                        <a href="techos.html" class="text-center bg-gray-800 text-white py-2 px-4 rounded-md shadow-md hover:bg-gray-700 transition">
+                            Ver detalles
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Foto 3 -->
+            <div class="w-full md:w-1/4 px-4 mb-8">
+                <div class="bg-gray-100 p-4 rounded-lg shadow-lg">
+                    <img src="https://img.freepik.com/fotos-premium/puente-hormigon-armado-abajo-construccion-puentes-hormigon-armado-infraestructura-ingenieria-puentes_507676-3086.jpg" alt="Fabricación 3" class="w-full rounded-lg mb-4">
+                    <h2 class="text-xl font-semibold mb-2 text-gray-800 text-center">Tipos de Puentes</h2>
+                    <div class="flex justify-center">
+                        <a href="puentes.html" class="text-center bg-gray-800 text-white py-2 px-4 rounded-md shadow-md hover:bg-gray-700 transition">
+                            Ver detalles
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Foto 4 -->
+            <div class="w-full md:w-1/4 px-4 mb-8">
+                <div class="bg-gray-100 p-4 rounded-lg shadow-lg">
+                    <img src="img/tanque5.jpg" alt="Fabricación 4" class="w-full rounded-lg mb-4">
+                    <h2 class="text-xl font-semibold mb-2 text-gray-800 text-center">Tipos de Tanques</h2>
+                    <div class="flex justify-center">
+                        <a href="tanques.html" class="text-center bg-gray-800 text-white py-2 px-4 rounded-md shadow-md hover:bg-gray-700 transition">
+                            Ver detalles
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="container mx-auto py-8 px-4">
+        <h1 class="text-4xl font-extrabold mb-10 text-center text-Blue-500 md:text-5xl">Fabricación</h1>
+        <!-- <p class="text-lg text-gray-700 text-center mb-8">En J&K Machinery EIRL, ofrecemos servicios de fabricación de alta calidad para diversos
+             sectores industriales. Nuestro equipo altamente capacitado y nuestras tecnologías avanzadas nos permiten ofrecer soluciones precisas
+              y eficientes.</p> -->
+        
+        <!-- Fabricación de Tanques -->
+        <div class="flex flex-col md:flex-row items-center mt-8 bg-gray-100 p-6 rounded-lg shadow-lg">
+            <div class="relative w-full md:w-1/2 group">
+                <a href="tanques.html">
+                    <img src="img/tanque4.jpg" alt="Fabricación de Tanques" class="w-full rounded-lg shadow-md">
+                    <span class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">Ver más</span>
+                </a>
+            </div>
+            <div class="md:ml-8 mt-4 md:mt-0">
+                <h2 class="text-4xl font-bold mb-20 text-light-blue text-center">Fabricación de Tanques</h2>
+                <p class="text-base text-gray-600">Especializados en la fabricación de tanques de almacenamiento para diversos líquidos y gases, con los más altos estándares de calidad y seguridad.</p>
+            </div>
+        </div>
+       
+        <!-- Fabricación de Barandas o Escaleras -->
+        <div class="flex flex-col md:flex-row items-center mt-8 bg-gray-200 p-6 rounded-lg shadow-lg">
+            <div class="relative w-full md:w-1/2 group">
+                <a href="barandas.html">
+                    <img src="img/escalera1.jpg" alt="Fabricación de Barandas o Escaleras" class="w-full rounded-lg shadow-md">
+                    <span class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">Ver más</span>
+                </a>
+            </div>
+            <div class="md:ml-8 mt-4 md:mt-0">
+                <h2 class="text-4xl font-bold mb-20 text-light-blue text-center">Fabricación de Barandas y Escaleras</h2>
+                <p class="text-base text-gray-600">Diseño y fabricación de barandas y escaleras metálicas para diversos entornos, combinando funcionalidad y estética.</p>
+            </div>
+        </div>
+        
+        <!-- Fabricación de Techos -->
+        <div class="flex flex-col md:flex-row items-center mt-8 bg-gray-100 p-6 rounded-lg shadow-lg">
+            <div class="relative w-full md:w-1/2 group">
+                <a href="techos.html">
+                    <img src="img/techo1.png" alt="Fabricación de Techos" class="w-full rounded-lg shadow-md">
+                    <span class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">Ver más</span>
+                </a>
+            </div>
+            <div class="md:ml-8 mt-4 md:mt-0">
+                <h2 class="text-4xl font-bold mb-20 text-light-blue text-center">Fabricación de Techos</h2>
+                <p class="text-base text-gray-600">Construcción de techos metálicos resistentes y duraderos, adaptados a las necesidades específicas de cada cliente.</p>
+            </div>
+        </div>
+        
+        <!-- Fabricación de Puentes y mantenimiento de barcos pesqueros -->
+        <div class="flex flex-col md:flex-row justify-between mt-8 bg-gray-200 p-6 rounded-lg shadow-lg space-y-4 md:space-y-0 md:space-x-4">
+            <div class="w-full md:w-1/2 flex flex-col items-center">
+                <div class="text-center mb-4">
+                    <h2 class="text-3xl font-bold mb-12 text-light-blue text-center">Mantenimiento de Barcos Pesqueros</h2>
+                    <p class="text-base text-gray-600">Proveemos mantenimiento integral a barcos pesqueros, asegurando que todas las instalaciones y equipos estén en perfecto estado para una operación segura y eficiente.</p>
+                </div>
+                <a href="pesca.html" class="relative group w-full">
+                    <img src="https://revistapuerto.com.ar/wp-content/uploads/2022/04/Revista-Puerto-Mar-del-Plata-Buques-pesqueros-en-el-muelle-01.jpg" alt="Fabricación de Tubos" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    <span class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">Ver más</span>
+                </a>
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col items-center">
+                <div class="text-center mb-4">
+                    <h2 class="text-3xl font-bold mb-12 text-light-blue text-center">Fabricación de Puentes</h2>
+                    <p class="text-base text-gray-600">Construcción de estructuras metálicas para puentes, garantizando resistencia y seguridad para soportar grandes cargas.</p>
+                </div>
+                <a href="puentes.html" class="relative group w-full">
+                    <img src="img/puente2.jpg" alt="Fabricación de Puentes" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    <span class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">Ver más</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Otros Trabajos de Metal -->
+        <div class="flex flex-col md:flex-row items-center mt-8 bg-gray-100 p-6 rounded-lg shadow-lg">
+            <div class="relative w-full md:w-1/2 group">
+                <a href="otros.html">
+                    <img src="https://t3.ftcdn.net/jpg/00/81/13/94/360_F_81139483_VJsR2HHObKAyX1jWfxMpZXGCZ9fPtmFF.jpg" alt="Otros Trabajos de Metal" class="w-full rounded-lg shadow-md">
+                    <span class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">Ver más</span>
+                </a>
+            </div>
+            <div class="md:ml-8 mt-4 md:mt-0">
+                <h2 class="text-4xl font-bold mb-20 text-light-blue text-center">Montaje y Desmontaje</h2>
+                <p class="text-base text-gray-600">Realizamos una amplia variedad de trabajos en metal, adaptándonos a las especificaciones y requerimientos de cada proyecto.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Información de contacto -->
+            <div class="space-y-4 flex flex-col justify-center items-center text-lg">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C8.13 2 5 5.13 5 9c0 4.75 7 13 7 13s7-8.25 7-13c0-3.87-3.13-7-7-7z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11a2 2 0 110-4 2 2 0 010 4z"></path>
+                    </svg>
+                    <p>Dirección: Calle Industria #123, Lima</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 6H9a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V8a2 2 0 00-2-2zM11 2h2a1 1 0 011 1v2h-4V3a1 1 0 011-1z"></path>
+                    </svg>
+                    <p>Celular: +51 987654321</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.94c.53.33 1.21.33 1.74 0L21 8m-18-2h18a2 2 0 012 2v12a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2z"></path>
+                    </svg>
+                    <p>Correo: contacto@machinery.com</p>
+                </div>
+            </div>
+    
+            <!-- Google Maps -->
+            <div>
+                <iframe class="w-full h-64" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.6827811035435!2d-77.03254613007673!3d-12.046374260721996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8ba2e5580a1%3A0x2b6f4a1e17ce1b8f!2sLima%2C%20Per%C3%BA!5e0!3m2!1ses!2sus!4v1617247119650!5m2!1ses!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    
+        <div class="container mx-auto text-center mt-8">
+            <p class="text-lg">J&K Machinery EIRL © Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/menu.js"></script>
+</body>
+</html>

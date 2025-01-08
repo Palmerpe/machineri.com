@@ -1,11 +1,11 @@
 /* Estilos para el slider */
-/* Estilos para el slider */
 .slider-container {
   position: relative;
   width: 100%;
-  height: auto; /* Cambiado a auto */
-  max-height: 450px; /* Altura máxima del slider para pantallas grandes */
+  height: auto;
+  max-height: 450px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .slider-track {
@@ -19,35 +19,75 @@
   object-fit: cover;
 }
 
-/* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
   .slider-container {
-      max-height: 300px; /* Altura máxima del slider en dispositivos móviles */
+      max-height: 300px;
   }
 }
 
-
 /* Estilo base para el nav */
-/* Ocultar menú en móvil por defecto */
 #menu.hidden {
   display: none;
 }
 
-/* Mostrar menú en móvil cuando tiene la clase "show" */
 #menu.show {
   display: flex;
   flex-direction: column;
-  background-color: #333; /* Fondo opcional para menú desplegable */
+  background-color: #333;
   width: 100%;
   padding: 1rem 0;
+  z-index: 2;
 }
 
 /* Menú en pantallas grandes */
 @media (min-width: 768px) {
   #menu {
-      display: flex !important; /* Siempre visible en pantallas grandes */
+      display: flex !important;
       flex-direction: row;
       justify-content: center;
+      z-index: 2;
   }
+}
+
+/* Ocultar submenú por defecto */
+.group-hover\:block {
+  display: none;
+}
+
+/* Mostrar submenú al hacer clic */
+.nav-item.group.open ul {
+  display: block;
+  position: absolute;
+  background-color: #333;
+  z-index: 3;
+}
+
+/* dar color azul calro a los titulos de la plantilla fabricacion */
+.text-light-blue {
+  color: #60A5FA; /* Light blue */
+}
+
+/* estilos de las letras que se escriben solas*/
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+#dynamic-text::after {
+  content: '';
+  border-right: 0.1em solid black;
+  animation: blink 0.7s step-end infinite;
+}
+
+#dynamic-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: none; /* Eliminamos esta línea */
+  animation: typing 3.5s steps(40, end) /* Eliminamos la animación blink-caret */;
 }
 
