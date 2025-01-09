@@ -1,0 +1,7 @@
+.text-overlay {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.image-section:hover .text-overlay {
+    opacity: 0;
+}
