@@ -1,0 +1,23 @@
+/* estilos de las letras que se escriben solas*/
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+  #dynamic-text::after {
+    content: '';
+    border-right: 0.1em solid black;
+    animation: blink 0.7s step-end infinite;
+  }
+  
+  #dynamic-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: none; /* Eliminamos esta línea */
+    animation: typing 3.5s steps(40, end) /* Eliminamos la animación blink-caret */;
+  }
