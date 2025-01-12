@@ -30,7 +30,8 @@ app.use(cors({
     origin: '*', // Permitir solicitudes desde cualquier origen
     methods: 'POST',
     allowedHeaders: ['Content-Type']
-}));
+  }));
+  
 
 app.use(bodyParser.json());
 
