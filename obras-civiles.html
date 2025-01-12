@@ -55,13 +55,71 @@
     </nav>
 
      <!-- foto de presentacion --> 
-     <section class="image-section relative"> <img src="https://img.freepik.com/foto-gratis/bombero-intentando-contener-incendio-forestal_23-2150880225.jpg" alt="Puente" class="w-full h-screen object-cover"> 
+     <section class="image-section relative"> <img src="https://static.misionesonline.news/wp-content/uploads/2016/12/bomberos-1v02ggn94il8-5qv51h9l6e90.jpg" alt="Puente" class="w-full h-screen object-cover"> 
         <div class="absolute inset-0 flex items-center justify-center text-overlay bg-black bg-opacity-50">
-            <h2 class="text-4xl font-bold text-white">
+            <h2 class="text-4xl font-bold text-white text-center">
                 Sistema contra incendio
             </h2>
         </div>
     </section>
+
+<!-- Sección con Animación de Texto en Llamas -->
+<section class="container mx-auto py-8 px-4 text-center" style="background-color: teal;">
+    <h1 class="text-1xl font-extrabold mb-14 text-center text-gray-100 md:text-2xl flaming-text"> 
+        Instalaciones de tuberia contra incendio.
+    </h1>
+</section>
+
+<!-- Estilos CSS en linea  solo para la animacion de las letras en llamas-->
+<style>
+@keyframes flaming {
+  0% { color: #f1ebe0; text-shadow: 0 0 2px #dfd4d4, 0 0 10px #ff9c00, 0 0 15px #ff6e00, 0 0 20px #f9e459, 0 0 25px #ff0000; }
+  50% { color: #ecd3c0; text-shadow: 0 0 5px #fff, 0 0 15px #ff6e00, 0 0 20px #ff0000, 0 0 25px #f2aa5e, 0 0 30px #ff0000; }
+  100% { color: #ff0000; text-shadow: 0 0 5px #fff, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #fac7c7, 0 0 30px #ff0000; }
+}
+
+.flaming-text {
+  animation: flaming 2s infinite alternate;
+}
+</style>
+
+
+<!-- Sección con Foto y Listas de Textos -->
+<section class="container mx-auto py-8 px-4" style="background-color: rgb(255, 255, 255);">
+    <div class="flex flex-col md:flex-row items-center">
+        <!-- Sección de Textos -->
+        <div class="md:w-1/2 mb-4 md:mb-0">
+            <!-- Usos -->
+            <div class="mb-4">
+                <h3 class="text-2xl font-bold mb-2 p-2 text-center" style="background-color: teal; color: white; border-radius: 8px;">USOS</h3>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li>Instalaciones industriales.</li>
+                    <li>Instalaciones comerciales.</li>
+                    <li>Edificios.</li>
+                    <li>Vivienda.</li>
+                </ul>
+            </div>
+            <!-- Beneficios -->
+            <div>
+                <h3 class="text-2xl font-bold mb-2 p-2 text-center" style="background-color: teal; color: white; border-radius: 8px;">BENEFICIOS</h3>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li>Tubos fabricados en dimensiones correctas.</li>
+                    <li>Materia prima de calidad certificada.</li>
+                    <li>Venta de tubos y/o accesorios de los sistemas.</li>
+                    <li>Asesoría para el diseño e instalación del sistema.</li>
+                    <li>Tubos ranurados en medidas superiores a 1 1/4”.</li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- Foto -->
+        <div class="md:w-1/2 flex justify-center items-center">
+            <img src="https://grupocasalima.com/wp-content/uploads/2023/08/Sistemas-contra-incendio-para-edificios-residenciales.webp" alt="Instalaciones" class="w-full h-auto object-cover rounded-lg shadow-md">
+        </div>
+    </div>
+</section>
+
+
 
     <!-- redes contra incendio -->
 <section class="container mx-auto py-8 px-2" style="background-color: teal;">
