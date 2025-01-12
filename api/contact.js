@@ -27,7 +27,7 @@ app.use(helmet());
 
 // Configuración de CORS para permitir solicitudes desde cualquier origen
 app.use(cors({
-    origin: '*',
+    origin: '*', // Permitir solicitudes desde cualquier origen
     methods: 'POST',
     allowedHeaders: ['Content-Type']
 }));
@@ -98,5 +98,6 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Servidor escuchando en el puerto ${port}`);
 });
+
 
 
