@@ -25,18 +25,20 @@ const logger = winston.createLogger({
 // Usa helmet para establecer los encabezados HTTP de seguridad
 app.use(helmet());
 
+// Configuración de CORS para permitir solicitudes desde cualquier origen
+app.use(cors({
+    origin: '*',
+    methods: 'POST',
+    allowedHeaders: ['Content-Type']
+}));
+
+app.use(bodyParser.json());
+
 // Servir archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'css')));
 app.use(express.static(path.join(__dirname, 'img')));
 app.use(express.static(path.join(__dirname, 'js')));
-
-app.use(cors({
-    origin: 'http://localhost:8080',
-    methods: 'POST',
-    allowedHeaders: ['Content-Type']
-}));
-app.use(bodyParser.json());
 
 // Rutas para servir las páginas HTML
 const pages = ['index', 'contacto', 'fabricacion', 'mantenimiento-industrial', 'montaje-desmontaje', 
@@ -96,4 +98,5 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Servidor escuchando en el puerto ${port}`);
 });
+
 
