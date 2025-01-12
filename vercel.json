@@ -6,7 +6,7 @@
         "use": "@vercel/node"
       },
       {
-        "src": "index.html",
+        "src": "*.html",
         "use": "@vercel/static"
       },
       {
@@ -40,4 +40,5 @@
       { "src": "/mineria", "dest": "/mineria.html" }
     ]
   }
+  
   

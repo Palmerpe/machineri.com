@@ -38,62 +38,15 @@ app.use(cors({
 }));
 app.use(bodyParser.json());
 
-// Ruta para servir index.html
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
+// Rutas para servir las páginas HTML
+const pages = ['index', 'contacto', 'fabricacion', 'mantenimiento-industrial', 'montaje-desmontaje', 
+              'nosotros', 'obras-civiles', 'puentes', 'tanques', 'techos', 'mantenimiento-barcos',
+              'electricidad', 'escaleras', 'mineria'];
 
-// Rutas adicionales para otras páginas HTML
-app.get('/contacto', (req, res) => {
-    res.sendFile(path.join(__dirname, 'contacto.html'));
-});
-
-app.get('/fabricacion', (req, res) => {
-    res.sendFile(path.join(__dirname, 'fabricacion.html'));
-});
-
-app.get('/mantenimiento-industrial', (req, res) => {
-    res.sendFile(path.join(__dirname, 'mantenimiento-industrial.html'));
-});
-
-app.get('/montaje-desmontaje', (req, res) => {
-    res.sendFile(path.join(__dirname, 'montaje-desmontaje.html'));
-});
-
-app.get('/nosotros', (req, res) => {
-    res.sendFile(path.join(__dirname, 'nosotros.html'));
-});
-
-app.get('/obras-civiles', (req, res) => {
-    res.sendFile(path.join(__dirname, 'obras-civiles.html'));
-});
-
-app.get('/puentes', (req, res) => {
-    res.sendFile(path.join(__dirname, 'puentes.html'));
-});
-
-app.get('/tanques', (req, res) => {
-    res.sendFile(path.join(__dirname, 'tanques.html'));
-});
-
-app.get('/techos', (req, res) => {
-    res.sendFile(path.join(__dirname, 'techos.html'));
-});
-
-app.get('/mantenimiento-barcos', (req, res) => {
-    res.sendFile(path.join(__dirname, 'mantenimiento-barcos.html'));
-});
-
-app.get('/electricidad', (req, res) => {
-    res.sendFile(path.join(__dirname, 'electricidad.html'));
-});
-
-app.get('/escaleras', (req, res) => {
-    res.sendFile(path.join(__dirname, 'escaleras.html'));
-});
-
-app.get('/mineria', (req, res) => {
-    res.sendFile(path.join(__dirname, 'mineria.html'));
+pages.forEach(page => {
+    app.get(`/${page}`, (req, res) => {
+        res.sendFile(path.join(__dirname, `${page}.html`));
+    });
 });
 
 // Ruta para manejar solicitudes de contacto
@@ -143,9 +96,3 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Servidor escuchando en el puerto ${port}`);
 });
-
-
-
-
-
-
