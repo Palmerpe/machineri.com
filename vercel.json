@@ -24,7 +24,20 @@
     ],
     "routes": [
       { "src": "/api/(.*)", "dest": "/api/contact.js" },
-      { "src": "/(.*)", "dest": "/index.html" }
+      { "src": "/", "dest": "/index.html" },
+      { "src": "/contacto", "dest": "/contacto.html" },
+      { "src": "/fabricacion", "dest": "/fabricacion.html" },
+      { "src": "/mantenimiento-industrial", "dest": "/mantenimiento-industrial.html" },
+      { "src": "/montaje-desmontaje", "dest": "/montaje-desmontaje.html" },
+      { "src": "/nosotros", "dest": "/nosotros.html" },
+      { "src": "/obras-civiles", "dest": "/obras-civiles.html" },
+      { "src": "/puentes", "dest": "/puentes.html" },
+      { "src": "/tanques", "dest": "/tanques.html" },
+      { "src": "/techos", "dest": "/techos.html" },
+      { "src": "/mantenimiento-barcos", "dest": "/mantenimiento-barcos.html" },
+      { "src": "/electricidad", "dest": "/electricidad.html" },
+      { "src": "/escaleras", "dest": "/escaleras.html" },
+      { "src": "/mineria", "dest": "/mineria.html" }
     ]
   }
   

@@ -25,6 +25,12 @@ const logger = winston.createLogger({
 // Usa helmet para establecer los encabezados HTTP de seguridad
 app.use(helmet());
 
+// Servir archivos estáticos
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'css')));
+app.use(express.static(path.join(__dirname, 'img')));
+app.use(express.static(path.join(__dirname, 'js')));
+
 app.use(cors({
     origin: 'http://localhost:8080',
     methods: 'POST',
@@ -34,9 +40,63 @@ app.use(bodyParser.json());
 
 // Ruta para servir index.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// Rutas adicionales para otras páginas HTML
+app.get('/contacto', (req, res) => {
+    res.sendFile(path.join(__dirname, 'contacto.html'));
+});
+
+app.get('/fabricacion', (req, res) => {
+    res.sendFile(path.join(__dirname, 'fabricacion.html'));
+});
+
+app.get('/mantenimiento-industrial', (req, res) => {
+    res.sendFile(path.join(__dirname, 'mantenimiento-industrial.html'));
+});
+
+app.get('/montaje-desmontaje', (req, res) => {
+    res.sendFile(path.join(__dirname, 'montaje-desmontaje.html'));
+});
+
+app.get('/nosotros', (req, res) => {
+    res.sendFile(path.join(__dirname, 'nosotros.html'));
+});
+
+app.get('/obras-civiles', (req, res) => {
+    res.sendFile(path.join(__dirname, 'obras-civiles.html'));
+});
+
+app.get('/puentes', (req, res) => {
+    res.sendFile(path.join(__dirname, 'puentes.html'));
+});
+
+app.get('/tanques', (req, res) => {
+    res.sendFile(path.join(__dirname, 'tanques.html'));
+});
+
+app.get('/techos', (req, res) => {
+    res.sendFile(path.join(__dirname, 'techos.html'));
+});
+
+app.get('/mantenimiento-barcos', (req, res) => {
+    res.sendFile(path.join(__dirname, 'mantenimiento-barcos.html'));
+});
+
+app.get('/electricidad', (req, res) => {
+    res.sendFile(path.join(__dirname, 'electricidad.html'));
+});
+
+app.get('/escaleras', (req, res) => {
+    res.sendFile(path.join(__dirname, 'escaleras.html'));
+});
+
+app.get('/mineria', (req, res) => {
+    res.sendFile(path.join(__dirname, 'mineria.html'));
+});
+
+// Ruta para manejar solicitudes de contacto
 app.post('/api/contact', [
     body('nombre').isString().escape(),
     body('email').isEmail().normalizeEmail(),
@@ -48,8 +108,6 @@ app.post('/api/contact', [
     }
 
     const { nombre, email, mensaje } = req.body;
-
-    console.log('Datos recibidos:', { nombre, email, mensaje });
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -67,9 +125,7 @@ app.post('/api/contact', [
     };
 
     try {
-        console.log('Enviando correo con las siguientes opciones:', mailOptions);
         await transporter.sendMail(mailOptions);
-        console.log('Correo enviado correctamente.');
         res.status(200).send('Correo enviado correctamente.');
     } catch (error) {
         logger.error('Error al enviar el correo:', error);
@@ -87,6 +143,7 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Servidor escuchando en el puerto ${port}`);
 });
+
 
 
 
