@@ -5,7 +5,9 @@
   "main": "api/contact.js",
   "scripts": {
     "start": "node api/contact.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss src/styles.css -o css/estilos.css"
+    
   },
   "author": "",
   "license": "ISC",
@@ -120,6 +122,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
+    "postcss-cli": "^9.1.0",
     "tailwindcss": "^3.4.17"
   }
 }
