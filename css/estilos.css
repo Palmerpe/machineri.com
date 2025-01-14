@@ -93,3 +93,64 @@
   animation: typing 3.5s steps(40, end) /* Eliminamos la animación blink-caret */;
 }
 
+
+/* Estilos para el footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+footer h3 {
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+#map {
+  width: 100%;
+  height: 200px;
+}
+
+@media (max-width: 768px) {
+  footer .grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Estilos del link de whatsapp */
+footer a:hover {
+  color: #25D366; /* Cambia a color verde de WhatsApp */
+}
+
+footer svg.w-6.h-6 {
+  color: white; /* Asegúrate de que el ícono sea blanco */
+}
